@@ -4,7 +4,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://yeltay.com",
+  site: "https://y-boost.com",
   integrations: [tailwind(), icon()],
   vite: {
     build: {

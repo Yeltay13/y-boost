@@ -20,5 +20,17 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "description": "Hi there!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeltay13/y-boost.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeltay13/y-boost/issues"
+  },
+  "homepage": "https://github.com/yeltay13/y-boost#readme"
 }
