@@ -31,6 +31,7 @@ const { title }: { title: string } = Astro.props;
         a.appendChild(r);
     	})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
+		<script src="https://cdn.amplitude.com/script/c085b6571afb4f130edaf301df26955d.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('c085b6571afb4f130edaf301df26955d', {"fetchRemoteConfig":true,"autocapture":true});</script>
 	</head>
 	<body>
 		<slot />
