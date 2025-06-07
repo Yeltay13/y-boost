@@ -1,72 +1,18 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
-import Testimonials from '../components/Testimonials.astro';
-import Pricing from '../components/Pricing.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Pricing from "../components/Pricing.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y-Boost | Land Your International Dream Job</title>
-    <link rel="stylesheet" href="/styles/tailwind.css">
-    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Y-Boost | Land Your International Dream Job</title>
-      <meta name="title" content="Y-Boost | Land Your International Dream Job" />
-      <meta name="description" content="We guide your job search journey – honing soft skills, preparing for interviews, and refining CVs and cover letters – with personalized consultations and a tailored roadmap." />
-
-      <meta name="google-site-verification" content="mrKQwCtLuxAh0v8IUlTJfJZXPeBPT2CElkUTJpl5-R4" />
-  
-      <!-- Open Graph Meta Tags -->
-      <meta property="og:title" content="Y-Boost | Land Your International Dream Job">
-      <meta property="og:description" content="We guide your job search journey – honing soft skills, preparing for interviews, and refining CVs and cover letters – with personalized consultations and a tailored roadmap.">
-      <meta property="og:image" content="https://y-boost.com/assets/y_boost_logo_png.png">
-      <meta property="og:url" content="https://y-boost.com/">
-      <meta property="og:type" content="website">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-  
-      <!-- Twitter Card Meta Tags -->
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Y-Boost | Land Your International Dream Job">
-      <meta name="twitter:description" content="We guide your job search journey – honing soft skills, preparing for interviews, and refining CVs and cover letters – with personalized consultations and a tailored roadmap.">
-      <meta name="twitter:image" content="https://y-boost.com/assets/y_boost_logo_png.png"">
-  
-      <!-- Fallback for Telegram -->
-      <meta name="description" content="Y-Boost | Land Your International Dream Job">
-  
-      <!-- Basic Meta Tags -->
-      <meta name="robots" content="index, follow">
-      <link rel="canonical" href="https://y-boost.com/">
-  </head>
-  
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </head>
-  <body>
-    <Navbar />
-    <Hero />
-    <Features />
-	  <Testimonials />
-    <Pricing />
-    <Footer />
-  
-
-  </body>
-</html>
+<Layout title="Y-Boost | Land Your International Dream Job">
+  <Navbar />
+  <Hero />
+  <Features />
+  <Testimonials />
+  <Pricing />
+  <Footer />
+</Layout>

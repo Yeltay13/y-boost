@@ -1,20 +1,8 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
+import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://y-boost.com",
-  integrations: [tailwind(), icon()],
-  vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          assetFileNames: (assetInfo) => {
-            return `assets/${assetInfo.name}`;
-          },
-        },
-      },
-    },
-  },
+  integrations: [icon(), tailwind()],
 });
