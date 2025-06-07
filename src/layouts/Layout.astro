@@ -1,5 +1,7 @@
 ---
 const { title }: { title: string } = Astro.props;
+import "../styles/global.css";
+
 ---
 
 <!doctype html>
@@ -9,6 +11,8 @@ const { title }: { title: string } = Astro.props;
   <meta name="description" content="Astro description" />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <title>{title}</title>
 
   <!-- Google Analytics -->
