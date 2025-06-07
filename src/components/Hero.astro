@@ -1,34 +1,38 @@
 ---
 const heroUrl = '/assets/hero.jpg';
 ---
+
+<!-- src/components/Hero.astro -->
 <section
   id="home"
   class="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
-  style={`background-image: url('${heroUrl}')`}
+  style={`background-image: url('${heroUrl}');`}
 >
   <!-- Gradient overlay for extra depth -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50 z-0" />
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50 z-0"></div>
 
+  <!-- Content wrapper -->
   <div class="relative z-10 text-center px-6 max-w-2xl">
-    <!-- A. Headline + Subhead -->
+    <!-- Headline -->
     <h1 class="text-5xl font-extrabold text-gray-100">
       Master English. Land Your Dream Tech Role.
     </h1>
+    <!-- Subhead -->
     <p class="mt-4 text-lg text-gray-200">
       Personalized coaching, mock-interviews, and real-world practice for IT professionals.
     </p>
 
-    <!-- C. CTAs -->
+    <!-- Call to action buttons -->
     <div class="mt-8 flex justify-center space-x-4">
       <a
         href="https://t.me/yelty"
-        class="px-6 py-3 bg-[#58256f] hover:bg-[#1a5a8c] text-[#d3d2e5] rounded-md font-semibold"
+        class="px-6 py-3 bg-[#58256f] hover:bg-[#1a5a8c] text-[#d3d2e5] rounded-md font-semibold transition"
       >
         Get Started
       </a>
       <a
         href="#features"
-        class="px-6 py-3 border border-gray-300 text-gray-300 rounded-md hover:bg-gray-700"
+        class="px-6 py-3 border border-gray-300 text-gray-300 rounded-md hover:bg-gray-700 transition"
       >
         Learn More
       </a>
