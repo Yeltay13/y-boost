@@ -4,5 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: "https://y-boost.com",
+  base: "/",
   integrations: [icon(), tailwind()],
 });
