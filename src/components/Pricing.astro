@@ -1,97 +1,100 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Pricing">
-  <section id="pricing" class="bg-[#0f0830] py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold text-gray-100">Pricing Plans</h2>
-        <p class="mt-2 text-lg text-gray-300">Select the package that accelerates your career.</p>
-      </div>
-
-      <!-- Cards Grid -->
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-        <!-- General English -->
-        <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
-          <h3 class="text-2xl font-semibold text-gray-100">General English</h3>
-          <p class="mt-2 text-3xl font-extrabold text-white">$300 <span class="text-base font-medium text-gray-300">/ 8 weeks</span></p>
-          <div class="mt-4 flex-1">
-            <p class="font-medium text-gray-300">2× 1:1 lessons/week</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Placement test & custom syllabus</li>
-              <li>Monthly progress review</li>
-            </ul>
-          </div>
-          <p class="mt-4 text-sm text-gray-400">Builds a solid foundation in speaking, listening, reading & writing—key for confident everyday and professional communication.</p>
-          <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">Get Started</a>
-        </div>
-
-        <!-- English for IT Specialists -->
-        <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
-          <h3 class="text-2xl font-semibold text-gray-100">English for IT Specialists</h3>
-          <p class="mt-2 text-3xl font-extrabold text-white">$1,000 <span class="text-base font-medium text-gray-300">/ 12 weeks</span></p>
-          <div class="mt-4 flex-1">
-            <p class="font-medium text-gray-300">3× 1:1 lessons/week</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Skills audit & tech-vocab modules</li>
-              <li>Bi-weekly check-ins</li>
-            </ul>
-          </div>
-          <p class="mt-4 text-sm text-gray-400">Focuses on the language of coding, documentation & stand-ups—so you hit the ground running in technical teams.</p>
-          <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">Get Started</a>
-        </div>
-
-        <!-- English for IT Teams -->
-        <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
-          <h3 class="text-2xl font-semibold text-gray-100">English for IT Teams</h3>
-          <p class="mt-2 text-3xl font-extrabold text-white">$800 <span class="text-base font-medium text-gray-300">/ participant</span></p>
-          <div class="mt-4 flex-1">
-            <p class="font-medium text-gray-300">2× 1:1 lessons/week & 1× workshop/month</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Team communication assessment</li>
-              <li>Group simulations</li>
-              <li>Manager dashboards</li>
-            </ul>
-          </div>
-          <p class="mt-4 text-sm text-gray-400">Aligns terminology & improves cross-functional collaboration, reducing miscommunication and speeding up delivery.</p>
-          <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">Get Started</a>
-        </div>
-
-        <!-- English for Job Interviews -->
-        <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
-          <h3 class="text-2xl font-semibold text-gray-100">English for Job Interviews</h3>
-          <p class="mt-2 text-3xl font-extrabold text-white">$300 <span class="text-base font-medium text-gray-300">/ 4 weeks</span></p>
-          <div class="mt-4 flex-1">
-            <p class="font-medium text-gray-300">3× 1:1 lessons/week & 1× mock interview/week</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Interview-goal analysis</li>
-              <li>Tailored Q&A bank</li>
-              <li>Weekly mock + feedback</li>
-            </ul>
-          </div>
-          <p class="mt-4 text-sm text-gray-400">Rapid, targeted prep with real-world simulations—maximizing your confidence and success rate.</p>
-          <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">Get Started</a>
-        </div>
-
-        <!-- Corporate -->
-        <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
-          <h3 class="text-2xl font-semibold text-gray-100">Corporate</h3>
-          <p class="mt-2 text-3xl font-extrabold text-white">$1,200 <span class="text-base font-medium text-gray-300">/ participant</span></p>
-          <div class="mt-4 flex-1">
-            <p class="font-medium text-gray-300">2× 1:1 lessons/week & 1× workshop/month + clinic</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Corporate needs assessment & KPI alignment</li>
-              <li>Quarterly performance dashboards</li>
-            </ul>
-          </div>
-          <p class="mt-4 text-sm text-gray-400">Tailors content to your company’s terminology, culture & goals—driving measurable improvements in communication and client relations.</p>
-          <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">Get Started</a>
-        </div>
-
-      </div>
+<section id="pricing" class="bg-[#0f0830] py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-100">{t('pricing.title')}</h2>
+      <p class="mt-2 text-lg text-gray-300">{t('pricing.subtitle')}</p>
     </div>
-  </section>
-</Layout>
+
+    <!-- Cards Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- General English -->
+      <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
+        <h3 class="text-2xl font-semibold text-gray-100">{t('pricing.general_english.title')}</h3>
+        <p class="mt-2 text-3xl font-extrabold text-white">{t('pricing.general_english.price')} <span class="text-base font-medium text-gray-300">{t('pricing.general_english.period')}</span></p>
+        <div class="mt-4 flex-1">
+          <p class="font-medium text-gray-300">{t('pricing.general_english.lessons')}</p>
+          <ul class="mt-2 space-y-1 text-gray-400">
+            {t('pricing.general_english.features').map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">{t('pricing.general_english.description')}</p>
+        <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">{t('pricing.cta')}</a>
+      </div>
+
+      <!-- English for IT Specialists -->
+      <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
+        <h3 class="text-2xl font-semibold text-gray-100">{t('pricing.english_for_it.title')}</h3>
+        <p class="mt-2 text-3xl font-extrabold text-white">{t('pricing.english_for_it.price')} <span class="text-base font-medium text-gray-300">{t('pricing.english_for_it.period')}</span></p>
+        <div class="mt-4 flex-1">
+          <p class="font-medium text-gray-300">{t('pricing.english_for_it.lessons')}</p>
+          <ul class="mt-2 space-y-1 text-gray-400">
+            {t('pricing.english_for_it.features').map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">{t('pricing.english_for_it.description')}</p>
+        <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">{t('pricing.cta')}</a>
+      </div>
+
+      <!-- English for IT Teams -->
+      <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
+        <h3 class="text-2xl font-semibold text-gray-100">{t('pricing.english_for_teams.title')}</h3>
+        <p class="mt-2 text-3xl font-extrabold text-white">{t('pricing.english_for_teams.price')} <span class="text-base font-medium text-gray-300">{t('pricing.english_for_teams.period')}</span></p>
+        <div class="mt-4 flex-1">
+          <p class="font-medium text-gray-300">{t('pricing.english_for_teams.lessons')}</p>
+          <ul class="mt-2 space-y-1 text-gray-400">
+            {t('pricing.english_for_teams.features').map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">{t('pricing.english_for_teams.description')}</p>
+        <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">{t('pricing.cta')}</a>
+      </div>
+
+      <!-- English for Job Interviews -->
+      <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
+        <h3 class="text-2xl font-semibold text-gray-100">{t('pricing.job_interview.title')}</h3>
+        <p class="mt-2 text-3xl font-extrabold text-white">{t('pricing.job_interview.price')} <span class="text-base font-medium text-gray-300">{t('pricing.job_interview.period')}</span></p>
+        <div class="mt-4 flex-1">
+          <p class="font-medium text-gray-300">{t('pricing.job_interview.lessons')}</p>
+          <ul class="mt-2 space-y-1 text-gray-400">
+            {t('pricing.job_interview.features').map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">{t('pricing.job_interview.description')}</p>
+        <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">{t('pricing.cta')}</a>
+      </div>
+
+      <!-- Corporate -->
+      <div class="bg-[#1B262C] rounded-2xl shadow-lg p-6 flex flex-col h-full">
+        <h3 class="text-2xl font-semibold text-gray-100">{t('pricing.corporate.title')}</h3>
+        <p class="mt-2 text-3xl font-extrabold text-white">{t('pricing.corporate.price')} <span class="text-base font-medium text-gray-300">{t('pricing.corporate.period')}</span></p>
+        <div class="mt-4 flex-1">
+          <p class="font-medium text-gray-300">{t('pricing.corporate.lessons')}</p>
+          <ul class="mt-2 space-y-1 text-gray-400">
+            {t('pricing.corporate.features').map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">{t('pricing.corporate.description')}</p>
+        <a href="https://t.me/yelty" class="mt-6 w-full inline-block px-5 py-3 bg-purple-600 text-white rounded-lg font-semibold text-center shadow hover:bg-purple-500 transition">{t('pricing.cta')}</a>
+      </div>
+
+    </div>
+  </div>
+</section>

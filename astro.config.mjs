@@ -6,4 +6,11 @@ export default defineConfig({
   site: "https://y-boost.com",
   base: "/",
   integrations: [icon(), tailwind()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ru"],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
 });
