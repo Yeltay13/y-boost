@@ -1,43 +1,59 @@
 ---
 import { getLangFromUrl, useTranslations, languages } from '../i18n/ui';
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Add flag + name labels
+const languageLabels = {
+  en: "🇺🇸 English",
+  ru: "🇷🇺 Русский"
+};
 ---
 
 <nav class="bg-[#0f0830] pt-4 pb-4 sticky top-0 z-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="flex items-center">
-        <!-- Logo and Company Name as Link to Scroll to Top -->
         <a href={`/${lang}`} class="flex items-center">
           <img class="h-14 w-14 rounded-full" src="/assets/y_boost_logo_white.svg" alt="y-boost logo">
           <span class="ml-3 text-gray-300 text-xl font-semibold">Y-Boost</span>
         </a>
       </div>
-      
-      <!-- Mobile Menu Button -->
+
       <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
         <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 text-gray-300 hover:text-gray-100 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
 
-      <!-- Navigation Links for Desktop -->
-      <div class="hidden sm:flex space-x-4 ml-auto">
-        <a href={`/${lang}`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.home')}</a>
-        <a href="#features" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.features')}</a>
-        <a href="#testimonials" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.testimonials')}</a>
-        <a href="#pricing" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.pricing')}</a>
-        
-        <!-- Language Switcher -->
+      <div class="hidden sm:flex space-x-4 ml-auto items-center">
+        <a href={`/${lang}`} class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75]">{t('nav.home')}</a>
+        <a href="#features" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75]">{t('nav.features')}</a>
+        <a href="#testimonials" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75]">{t('nav.testimonials')}</a>
+        <a href="#pricing" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0F4C75]">{t('nav.pricing')}</a>
+
+        <!-- Custom Desktop Language Switcher -->
         <div class="relative ml-4">
-          <select id="language-selector" class="bg-transparent text-gray-300 text-sm border border-gray-600 rounded px-2 py-1 focus:outline-none focus:border-gray-400">
-            {Object.entries(languages).map(([code, name]) => (
-              <option value={code} selected={code === lang}>{name}</option>
+          <button id="lang-toggle" class="flex items-center px-3 py-2 border border-gray-600 text-sm text-gray-300 rounded hover:border-gray-400 focus:outline-none">
+            <span class="mr-2">{languageLabels[lang]}</span>
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="lang-menu" class="hidden absolute right-0 mt-2 w-32 bg-[#1a1a2e] border border-gray-600 rounded shadow-lg z-50">
+            {Object.entries(languages).map(([code]) => (
+              <a
+                href={`/${code}`}
+                class={`block px-4 py-2 text-sm text-gray-300 hover:bg-[#2b2b47] ${code === lang ? 'bg-[#2b2b47]' : ''}`}
+              >
+                {languageLabels[code]}
+              </a>
             ))}
-          </select>
+          </div>
         </div>
       </div>
     </div>
@@ -46,16 +62,16 @@ const t = useTranslations(lang);
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="sm:hidden bg-[#0f0830] text-gray-300 hidden">
     <div class="px-2 pt-2 pb-3 space-y-1">
-      <a href={`/${lang}`} class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.home')}</a>
-      <a href="#features" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.features')}</a>
-      <a href="#testimonials" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.testimonials')}</a>
-      <a href="#pricing" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75] hover:text-gray-300 active:bg-[#3282B8]">{t('nav.pricing')}</a>
-      
-      <!-- Mobile Language Switcher -->
-      <div class="px-3 py-2">
-        <select id="mobile-language-selector" class="bg-transparent text-gray-300 text-base border border-gray-600 rounded px-2 py-1 w-full focus:outline-none focus:border-gray-400">
-          {Object.entries(languages).map(([code, name]) => (
-            <option value={code} selected={code === lang}>{name}</option>
+      <a href={`/${lang}`} class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75]">{t('nav.home')}</a>
+      <a href="#features" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75]">{t('nav.features')}</a>
+      <a href="#testimonials" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75]">{t('nav.testimonials')}</a>
+      <a href="#pricing" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#0F4C75]">{t('nav.pricing')}</a>
+
+      <!-- Simple Mobile Language Switcher -->
+      <div class="px-3 pt-2">
+        <select id="mobile-language-selector" class="bg-[#1a1a2e] text-gray-300 text-base border border-gray-600 rounded px-2 py-1 w-full focus:outline-none focus:border-gray-400">
+          {Object.entries(languages).map(([code]) => (
+            <option value={code} selected={code === lang}>{languageLabels[code]}</option>
           ))}
         </select>
       </div>
@@ -63,67 +79,49 @@ const t = useTranslations(lang);
   </div>
 </nav>
 
-<!-- Script to toggle mobile menu and enable smooth scroll -->
 <script>
-  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+  // Toggle mobile menu
+  document.getElementById('mobile-menu-button').addEventListener('click', function () {
     const mobileMenu = document.getElementById('mobile-menu');
-    const expanded = mobileMenu.classList.toggle('hidden');
-    this.setAttribute('aria-expanded', String(expanded));
+    mobileMenu.classList.toggle('hidden');
   });
 
-  // Language switcher functionality
-  function handleLanguageChange(newLang) {
-    const currentPath = window.location.pathname;
-    const currentLang = currentPath.startsWith('/ru') ? 'ru' : 'en';
-    
-    if (newLang === currentLang) return;
-    
-    let newPath;
-    if (newLang === 'en') {
-      // Switch to English
-      newPath = currentPath.replace('/ru', '/en');
-    } else {
-      // Switch to Russian
-      newPath = currentPath.replace('/en', '/ru');
-    }
-    
-    window.location.href = newPath;
-  }
+  // Desktop language dropdown toggle
+  const langToggle = document.getElementById('lang-toggle');
+  const langMenu = document.getElementById('lang-menu');
 
-  // Desktop language switcher
-  const desktopSelector = document.getElementById('language-selector') as HTMLSelectElement;
-  if (desktopSelector) {
-    desktopSelector.addEventListener('change', function() {
-      handleLanguageChange(this.value);
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', () => {
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+        langMenu.classList.add('hidden');
+      }
     });
   }
 
-  // Mobile language switcher
-  const mobileSelector = document.getElementById('mobile-language-selector') as HTMLSelectElement;
+  // Mobile <select> language switch
+  const mobileSelector = document.getElementById('mobile-language-selector');
   if (mobileSelector) {
-    mobileSelector.addEventListener('change', function() {
-      handleLanguageChange(this.value);
+    mobileSelector.addEventListener('change', function () {
+      const newLang = this.value;
+      const currentPath = window.location.pathname;
+      const updatedPath = currentPath.replace(/^\/(en|ru)/, `/${newLang}`);
+      window.location.href = updatedPath;
     });
   }
 
-  // Enable smooth scroll and update URL
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId) || document.body;
 
-      // Smooth scroll to the section
-      targetElement.scrollIntoView({
-        behavior: 'smooth'
-      });
-
-      // Update the URL with the section ID (hash)
-      if (targetId) {
-        history.pushState(null, null, `#${targetId}`);
-      } else {
-        history.pushState(null, null, '#');
-      }
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      history.pushState(null, null, `#${targetId}`);
     });
   });
 </script>

@@ -21,6 +21,7 @@ const heroUrl = '/assets/hero_copy.webp';
     <h1 class="text-5xl sm:text-6xl font-bold text-white leading-tight">
       {t('hero.title')}
     </h1>
+
     <!-- Subhead -->
     <p class="mt-4 text-lg text-gray-200 max-w-xl mx-auto">
       {t('hero.subtitle')}
@@ -41,5 +42,45 @@ const heroUrl = '/assets/hero_copy.webp';
         {t('hero.cta.secondary')}
       </a>
     </div>
+
+    <!-- Lead Capture Form -->
+    <form
+      action="https://yboost-n8n.onrender.com/webhook-test/submit-form"
+      method="POST"
+      class="mt-10 w-full max-w-md mx-auto space-y-4 bg-white/10 p-6 rounded-lg backdrop-blur-md"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        class="w-full px-4 py-2 rounded-md bg-white/90 text-black focus:outline-none"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        class="w-full px-4 py-2 rounded-md bg-white/90 text-black focus:outline-none"
+      />
+      <input
+        type="text"
+        name="telegram"
+        placeholder="Telegram Handle"
+        class="w-full px-4 py-2 rounded-md bg-white/90 text-black focus:outline-none"
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        class="w-full px-4 py-2 rounded-md bg-white/90 text-black focus:outline-none"
+      />
+      <button
+        type="submit"
+        class="w-full bg-purple-600 text-white py-2 rounded-md font-semibold hover:bg-purple-500 transition"
+      >
+        Submit
+      </button>
+    </form>
   </div>
 </section>
