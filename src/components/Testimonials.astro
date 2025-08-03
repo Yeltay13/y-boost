@@ -1,100 +1,140 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const testimonials1 = [
   {
     name: "Irina Atroshonok",
     title: "QA Engineer",
     image: "/assets/testimonials/irina_atroshonok.jpg",
-    quote: "Thanks to Y-Boost, I landed a great job at a top international company. Their guidance improved my soft skills and made communicating with colleagues from different cultures so much easier. Living and working abroad feels smoother now—I highly recommend Y-Boost to anyone looking to grow their career and confidence!",
+    quote: {
+      en: "Thanks to Y-Boost, I landed a great job at a top international company. Their guidance improved my soft skills and made communicating with colleagues from different cultures so much easier. Living and working abroad feels smoother now—I highly recommend Y-Boost to anyone looking to grow their career and confidence!",
+      ru: "Благодаря Y-Boost я получила отличную работу в международной компании. Их помощь улучшила мои soft skills и сделала общение с коллегами из разных культур гораздо проще. Жить и работать за границей стало намного комфортнее!"
+    },
     linkedin: "https://www.linkedin.com/in/irina-atroshonok/"
   },
   {
     name: "Alexandr Kazachenko",
     title: "Senior Frontend Developer",
     image: "/assets/testimonials/alexander_kazachenko.jpg",
-    quote: "I'm deeply thankful for Y-Boost's guidance in enhancing my soft skills, which helped me secure a job at a leading international company. The improved communication skills have eased my interactions with diverse colleagues and made living abroad smoother. I highly recommend Y-Boost to anyone aiming to boost their career and personal development.",
+    quote: {
+      en: "I'm deeply thankful for Y-Boost's guidance in enhancing my soft skills, which helped me secure a job at a leading international company. The improved communication skills have eased my interactions with diverse colleagues and made living abroad smoother. I highly recommend Y-Boost to anyone aiming to boost their career and personal development.",
+      ru: "Благодаря Y-Boost я улучшил свои soft skills и получил работу в крупной международной компании. Общение с коллегами стало проще, а переезд — комфортнее. Очень рекомендую!"
+    },
     linkedin: "https://www.linkedin.com/in/alexandr-kazachenko-237ab7b8/"
   },
   {
     name: "Vladimir Sokolov",
     title: ".NET Developer",
     image: "/assets/testimonials/vladimir_sokolov.jpg",
-    quote: "Y-Boost significantly enhanced my soft skills, paving the way for me to secure a position at an international firm. Communication with colleagues has become smooth and effortless. Additionally, his guidance made my relocation process seamless. I'm deeply grateful for his impact on my professional journey.",
+    quote: {
+      en: "Y-Boost significantly enhanced my soft skills, paving the way for me to secure a position at an international firm. Communication with colleagues has become smooth and effortless. Additionally, their guidance made my relocation process seamless.",
+      ru: "Y-Boost помог прокачать мои soft skills, что открыло двери в международную компанию. Переезд прошел легко, и общение стало естественным."
+    },
     linkedin: "https://www.linkedin.com/in/sokoloffvl/"
   },
   {
     name: "Artem Lomonosov",
     title: "Senior Product Designer and DesignOps",
     image: "/assets/testimonials/artem_lomonosov.jpg",
-    quote: "Y-Boost's coaching dramatically enhanced my career and communication skills. Colleague interactions are smoother, and work travel is more efficient. Highly recommend for professional growth!",
+    quote: {
+      en: "Y-Boost's coaching dramatically enhanced my career and communication skills. Colleague interactions are smoother, and work travel is more efficient. Highly recommend for professional growth!",
+      ru: "Коучинг от Y-Boost значительно улучшил мои навыки общения. Работа и командировки стали проще и приятнее."
+    },
     linkedin: "https://www.linkedin.com/in/artem-lomonosov/"
   },
   {
     name: "Roman Nevolin",
     title: "Lead Frontend Developer",
     image: "/assets/testimonials/artem_nevolin.jpg",
-    quote: "Y-Boost’s guidance boosted my soft skills, enhancing work performance and colleague interactions. His support improved my confidence in new environments, easing travel. I highly recommend him for professional growth.",
+    quote: {
+      en: "Y-Boost’s guidance boosted my soft skills, enhancing work performance and colleague interactions. Their support improved my confidence in new environments, easing travel.",
+      ru: "Поддержка от Y-Boost повысила мои soft skills и уверенность при переезде и работе в новых условиях."
+    },
     linkedin: "https://www.linkedin.com/in/nulladdict/"
   },
   {
     name: "Artem Krivenkov",
     title: "Lead Java Developer",
     image: "/assets/testimonials/artem_krivenkov.jpg",
-    quote: "Y-Boost's training dramatically enhanced my soft skills, boosting my career and easing communication. Thanks to them, traveling is smoother and my confidence in professional interactions has soared. I'm grateful for their impactful guidance.",
+    quote: {
+      en: "Y-Boost's training dramatically enhanced my soft skills, boosting my career and easing communication. Thanks to them, traveling is smoother and my confidence in professional interactions has soared.",
+      ru: "Обучение в Y-Boost значительно прокачало мои soft skills, повысило уверенность и сделало рабочие поездки комфортнее."
+    },
     linkedin: "https://www.linkedin.com/in/artem-krivenkov-42896b296/"
-  },
-  
+  }
 ];
 
 const testimonials2 = [
-{
+  {
     name: "Marina Zavgorodnyaya",
     title: "Engineering Manager",
     image: "/assets/testimonials/marina_zavgorodnyaya.jpg",
-    quote: "Thanks to Y-Boost, my career has seen remarkable growth through improved soft skills. Communication with colleagues is more streamlined, and traveling has never been easier, making every journey a pleasure.",
+    quote: {
+      en: "Thanks to Y-Boost, my career has seen remarkable growth through improved soft skills. Communication with colleagues is more streamlined, and traveling has never been easier.",
+      ru: "С Y-Boost моя карьера резко пошла в гору — soft skills улучшились, и работа с коллегами стала проще."
+    },
     linkedin: "https://www.linkedin.com/in/marina-zavgorodnyaya-58b4b273/"
   },
   {
     name: "Liza Sudareva",
     title: "Marketing Lead",
     image: "/assets/testimonials/liza_sudareva.jpg",
-    quote: "Y-Boost had a huge impact on my professional life. My soft skills are much stronger, which has led to career growth, better team interactions, and smoother work trips.",
+    quote: {
+      en: "Y-Boost had a huge impact on my professional life. My soft skills are much stronger, which has led to career growth, better team interactions, and smoother work trips.",
+      ru: "Y-Boost сильно повлиял на мою карьеру. Soft skills на новом уровне — это улучшило взаимодействие с командой и командировки."
+    },
     linkedin: "https://www.linkedin.com/in/liza-sudareva-0b1b20116/"
   },
   {
     name: "Irina Andronova",
     title: "Head of Department",
     image: "/assets/testimonials/irina_andronova.jpg",
-    quote: "Y-Boost’s focus on soft skills has been a game-changer for me. My career’s taken a leap, working with colleagues is simpler, and traveling is way more enjoyable.",
+    quote: {
+      en: "Y-Boost’s focus on soft skills has been a game-changer for me. My career’s taken a leap, working with colleagues is simpler, and traveling is more enjoyable.",
+      ru: "Фокус Y-Boost на soft skills кардинально изменил мой карьерный путь. Общение стало легче, а поездки — приятнее."
+    },
     linkedin: "https://www.linkedin.com/in/iandronova/"
   },
   {
     name: "Ilya Saldin",
-    title: "Senior Software Enigneer",
+    title: "Senior Software Engineer",
     image: "https://media.licdn.com/dms/image/v2/C5603AQFvT4ZsOYIU-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516889997637?e=1743033600&v=beta&t=627QI0TMsRb3Jg1o1UFVZUsncQ2yG8A6ELghzMN5Hec",
-    quote: "Thanks to Y-Boost, my soft skills are on point, and it's doing wonders for my career. I’m getting along better with my team, and traveling for work is a lot easier now.",
+    quote: {
+      en: "Thanks to Y-Boost, my soft skills are on point, and it's doing wonders for my career. I’m getting along better with my team, and traveling for work is a lot easier now.",
+      ru: "Мои soft skills вышли на новый уровень благодаря Y-Boost. Работа с командой и поездки стали комфортнее."
+    },
     linkedin: "https://www.linkedin.com/in/ilya-saldin-49200140/"
   },
   {
     name: "Gleb Bodiachevskii",
     title: "Founder",
     image: "/assets/testimonials/gleb_bodiachevskii.jpg",
-    quote: "Y-Boost’s training seriously changed how I handle professional stuff. I’m better at communicating, my career’s moving forward, and business trips are way less of a hassle.",
+    quote: {
+      en: "Y-Boost’s training seriously changed how I handle professional stuff. I’m better at communicating, my career’s moving forward, and business trips are way less of a hassle.",
+      ru: "Y-Boost кардинально изменил мой подход к профессиональному общению. Карьера пошла вверх, поездки стали проще."
+    },
     linkedin: "https://www.linkedin.com/in/glebbo/"
   },
   {
     name: "Olga Krasova",
     title: "Integration Analyst",
     image: "/assets/testimonials/olga_krasova.jpg",
-    quote: "Y-Boost really helped me up my game with soft skills. My career’s taken off, chatting with coworkers is way smoother, and traveling for work has become a breeze.",
+    quote: {
+      en: "Y-Boost really helped me up my game with soft skills. My career’s taken off, chatting with coworkers is way smoother, and traveling for work has become a breeze.",
+      ru: "Y-Boost помог мне вывести soft skills на новый уровень. Карьера пошла в гору, общение стало легким."
+    },
     linkedin: "https://www.linkedin.com/in/olgamelkova/"
-  },
+  }
 ];
 ---
 
 <section id="testimonials" class="bg-[#0f0830] text-gray-300 py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-extrabold">Testimonials</h2>
+      <h2 class="text-3xl font-extrabold">{t("testimonials.title")}</h2>
     </div>
 
     <!-- Testimonials Set 1 -->
@@ -106,22 +146,13 @@ const testimonials2 = [
             <div class="ml-4">
               <h3 class="text-xl font-semibold">{testimonial.name}</h3>
               <p class="text-gray-300">{testimonial.title}</p>
-              {testimonial.linkedin && (
-                <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
-                  LinkedIn Profile
-                </a>
-              )}
+              <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
+                {t("testimonials.linkedin")}
+              </a>
             </div>
           </div>
           <div class="mt-4">
-            {testimonial.video ? (
-              <video class="w-full rounded-md" controls loading="lazy">
-                <source src={testimonial.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <p class="text-gray-300">{testimonial.quote}</p>
-            )}
+            <p class="text-gray-300">{testimonial.quote[lang] ?? testimonial.quote.en}</p>
           </div>
         </div>
       ))}
@@ -136,50 +167,26 @@ const testimonials2 = [
             <div class="ml-4">
               <h3 class="text-xl font-semibold">{testimonial.name}</h3>
               <p class="text-gray-300">{testimonial.title}</p>
-              {testimonial.linkedin && (
-                <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
-                  LinkedIn Profile
-                </a>
-              )}
+              <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
+                {t("testimonials.linkedin")}
+              </a>
             </div>
           </div>
           <div class="mt-4">
-            {testimonial.video ? (
-              <video class="w-full rounded-md" controls loading="lazy">
-                <source src={testimonial.video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <p class="text-gray-300">{testimonial.quote}</p>
-            )}
+            <p class="text-gray-300">{testimonial.quote[lang] ?? testimonial.quote.en}</p>
           </div>
         </div>
       ))}
     </div>
 
-    <!-- Carousel Controls (Dots and Arrows) -->
+    <!-- Carousel Controls -->
     <div class="flex justify-center items-center mt-8">
-      <!-- Left Arrow -->
-      <button
-        class="text-white text-xl px-4 py-2 hover:bg-[#452355] rounded-full"
-        onclick="window.prevTestimonialSet()"
-      >
-        &#8592;
-      </button>
-
-      <!-- Dots with aria-label for accessibility -->
+      <button class="text-white text-xl px-4 py-2 hover:bg-[#452355] rounded-full" onclick="window.prevTestimonialSet()">&#8592;</button>
       <div class="flex space-x-3 mx-4">
-        <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="window.showTestimonialSet(0)" aria-label="Show testimonial set 1"></span>
-        <span class="dot w-4 h-4 bg-gray-400 rounded-full cursor-pointer" onclick="window.showTestimonialSet(1)" aria-label="Show testimonial set 2"></span>
+        <span class="dot w-4 h-4 bg-white rounded-full cursor-pointer" onclick="window.showTestimonialSet(0)"></span>
+        <span class="dot w-4 h-4 bg-gray-400 rounded-full cursor-pointer" onclick="window.showTestimonialSet(1)"></span>
       </div>
-
-      <!-- Right Arrow -->
-      <button
-        class="text-white text-xl px-4 py-2 hover:bg-[#452355] rounded-full"
-        onclick="window.nextTestimonialSet()"
-      >
-        &#8594;
-      </button>
+      <button class="text-white text-xl px-4 py-2 hover:bg-[#452355] rounded-full" onclick="window.nextTestimonialSet()">&#8594;</button>
     </div>
   </div>
 </section>
@@ -192,7 +199,6 @@ const testimonials2 = [
     const set2 = document.getElementById('testimonial-set-2');
     const dots = document.querySelectorAll('.dot');
 
-    // Handle transition
     set1.classList.add('opacity-0');
     set2.classList.add('opacity-0');
     setTimeout(() => {
@@ -212,16 +218,14 @@ const testimonials2 = [
       }
 
       window.currentSet = setIndex;
-    }, 500); // Ensure this matches the transition duration
+    }, 500);
   };
 
   window.nextTestimonialSet = function () {
-    const nextSet = window.currentSet === 0 ? 1 : 0;
-    window.showTestimonialSet(nextSet);
+    window.showTestimonialSet(window.currentSet === 0 ? 1 : 0);
   };
 
   window.prevTestimonialSet = function () {
-    const prevSet = window.currentSet === 0 ? 1 : 0;
-    window.showTestimonialSet(prevSet);
+    window.showTestimonialSet(window.currentSet === 0 ? 1 : 0);
   };
 </script>

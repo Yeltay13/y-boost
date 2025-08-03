@@ -41,6 +41,8 @@ export const ui = {
     "features.ielts.title": "IELTS",
     "features.ielts.content":
       "25% report increased salary from improved language skills.\n50% see career growth with strong IELTS scores.\n60% of immigration authorities use IELTS for visas.",
+    "testimonials.title": "Testimonials",
+    "testimonials.linkedin": "LinkedIn Profile",
     "pricing.title": "Pricing Plans",
     "pricing.subtitle": "Select the package that accelerates your career.",
     "pricing.general_english.title": "General English",
@@ -137,6 +139,8 @@ export const ui = {
     "features.ielts.title": "IELTS",
     "features.ielts.content":
       "25% сообщают о повышении зарплаты благодаря улучшению языковых навыков.\n50% видят карьерный рост с высокими баллами IELTS.\n60% иммиграционных служб используют IELTS для виз.",
+    "testimonials.title": "Отзывы",
+    "testimonials.linkedin": "Профиль в LinkedIn",
     "pricing.title": "Тарифные планы",
     "pricing.subtitle": "Выберите пакет, который ускорит вашу карьеру.",
     "pricing.general_english.title": "Общий английский",
