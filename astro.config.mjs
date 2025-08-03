@@ -7,10 +7,10 @@ export default defineConfig({
   base: "/",
   integrations: [icon(), tailwind()],
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "ru"],
+    defaultLocale: "ru",
+    locales: ["ru", "en"],
     routing: {
-      prefixDefaultLocale: true,
+      prefixDefaultLocale: false,
     },
   },
 });
