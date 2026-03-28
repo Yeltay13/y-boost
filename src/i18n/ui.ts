@@ -46,7 +46,8 @@ export const ui = {
     "pricing.title": "Pricing Plans",
     "pricing.subtitle": "Select the package that accelerates your career.",
     "pricing.general_english.title": "General English",
-    "pricing.general_english.price": "$300",
+    "pricing.general_english.price":
+      "Pricing is tailored to your needs — get in touch",
     "pricing.general_english.period": "/ 8 weeks",
     "pricing.general_english.lessons": "2× 1:1 lessons/week",
     "pricing.general_english.features": [
@@ -56,7 +57,8 @@ export const ui = {
     "pricing.general_english.description":
       "Builds a solid foundation in speaking, listening, reading & writing—key for confident everyday and professional communication.",
     "pricing.english_for_it.title": "English for IT Specialists",
-    "pricing.english_for_it.price": "$1,000",
+    "pricing.english_for_it.price":
+      "Pricing is tailored to your needs — get in touch",
     "pricing.english_for_it.period": "/ 12 weeks",
     "pricing.english_for_it.lessons": "3× 1:1 lessons/week",
     "pricing.english_for_it.features": [
@@ -66,7 +68,8 @@ export const ui = {
     "pricing.english_for_it.description":
       "Focuses on the language of coding, documentation & stand-ups—so you hit the ground running in technical teams.",
     "pricing.english_for_teams.title": "English for IT Teams",
-    "pricing.english_for_teams.price": "$800",
+    "pricing.english_for_teams.price":
+      "Pricing is tailored to your needs — get in touch",
     "pricing.english_for_teams.period": "/ participant",
     "pricing.english_for_teams.lessons":
       "2× 1:1 lessons/week & 1× workshop/month",
@@ -78,7 +81,8 @@ export const ui = {
     "pricing.english_for_teams.description":
       "Aligns terminology & improves cross-functional collaboration, reducing miscommunication and speeding up delivery.",
     "pricing.job_interview.title": "English for Job Interviews",
-    "pricing.job_interview.price": "$300",
+    "pricing.job_interview.price":
+      "Pricing is tailored to your needs — get in touch",
     "pricing.job_interview.period": "/ 4 weeks",
     "pricing.job_interview.lessons":
       "3× 1:1 lessons/week & 1× mock interview/week",
@@ -90,7 +94,8 @@ export const ui = {
     "pricing.job_interview.description":
       "Rapid, targeted prep with real-world simulations—maximizing your confidence and success rate.",
     "pricing.corporate.title": "Corporate",
-    "pricing.corporate.price": "$1,200",
+    "pricing.corporate.price":
+      "Pricing is tailored to your needs — get in touch",
     "pricing.corporate.period": "/ participant",
     "pricing.corporate.lessons":
       "2× 1:1 lessons/week & 1× workshop/month + clinic",
@@ -144,7 +149,8 @@ export const ui = {
     "pricing.title": "Тарифные планы",
     "pricing.subtitle": "Выберите пакет, который ускорит вашу карьеру.",
     "pricing.general_english.title": "Общий английский",
-    "pricing.general_english.price": "$300",
+    "pricing.general_english.price":
+      "Стоимость рассчитывается индивидуально — оставьте заявку",
     "pricing.general_english.period": "/ 8 недель",
     "pricing.general_english.lessons": "2× индивидуальных урока/неделю",
     "pricing.general_english.features": [
@@ -154,7 +160,8 @@ export const ui = {
     "pricing.general_english.description":
       "Создает прочную основу в говорении, аудировании, чтении и письме — ключ для уверенного повседневного и профессионального общения.",
     "pricing.english_for_it.title": "Английский для IT-специалистов",
-    "pricing.english_for_it.price": "$1,000",
+    "pricing.english_for_it.price":
+      "Стоимость рассчитывается индивидуально — оставьте заявку",
     "pricing.english_for_it.period": "/ 12 недель",
     "pricing.english_for_it.lessons": "3× индивидуальных урока/неделю",
     "pricing.english_for_it.features": [
@@ -164,7 +171,8 @@ export const ui = {
     "pricing.english_for_it.description":
       "Фокусируется на языке программирования, документации и стендапов — чтобы вы сразу влились в технические команды.",
     "pricing.english_for_teams.title": "Английский для IT-команд",
-    "pricing.english_for_teams.price": "$800",
+    "pricing.english_for_teams.price":
+      "Стоимость рассчитывается индивидуально — оставьте заявку",
     "pricing.english_for_teams.period": "/ участника",
     "pricing.english_for_teams.lessons":
       "2× индивидуальных урока/неделю и 1× воркшоп/месяц",
@@ -176,7 +184,8 @@ export const ui = {
     "pricing.english_for_teams.description":
       "Согласовывает терминологию и улучшает межфункциональное сотрудничество, снижая недопонимание и ускоряя доставку.",
     "pricing.job_interview.title": "Английский для собеседований",
-    "pricing.job_interview.price": "$300",
+    "pricing.job_interview.price":
+      "Стоимость рассчитывается индивидуально — оставьте заявку",
     "pricing.job_interview.period": "/ 4 недели",
     "pricing.job_interview.lessons":
       "3× индивидуальных урока/неделю и 1× пробное собеседование/неделю",
@@ -188,7 +197,8 @@ export const ui = {
     "pricing.job_interview.description":
       "Быстрая, целенаправленная подготовка с симуляциями реального мира — максимизирующая вашу уверенность и успешность.",
     "pricing.corporate.title": "Корпоративный",
-    "pricing.corporate.price": "$1,200",
+    "pricing.corporate.price":
+      "Стоимость рассчитывается индивидуально — оставьте заявку",
     "pricing.corporate.period": "/ участника",
     "pricing.corporate.lessons":
       "2× индивидуальных урока/неделю и 1× воркшоп/месяц + клиника",
